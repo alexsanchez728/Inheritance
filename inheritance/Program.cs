@@ -78,6 +78,8 @@ namespace inheritance
                     case Jeans j:
                         // create j from legBase, a Jeans and do this...
                         Console.WriteLine($"its {j.Color} jeans");
+                        j.HowFarIMoved = 2000;
+                        // ^ jeans we know has a setter, so we can do this
                         break;
                     case IMoveable m:
                         m.Run(20);
@@ -85,6 +87,7 @@ namespace inheritance
                 }
                 //mover.HowFarIMoved = 7;
                 // ^ will not work because currently, one instance does not allow a set
+                Console.WriteLine($"The {mover.GetType().Name} moved {mover.HowFarIMoved} units");
             }
 
             Console.ReadKey();

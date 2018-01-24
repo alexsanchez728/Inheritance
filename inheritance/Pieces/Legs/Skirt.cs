@@ -4,6 +4,9 @@ namespace inheritance.Pieces.Legs
 {
     class Skirt : Legbase, IMoveable
     {
+
+
+
         public string Material { get; set; }
         public Length Length { get; set; }
         int _howFarIMoved;
@@ -25,13 +28,13 @@ namespace inheritance.Pieces.Legs
 
         public override void Walk(int numberOfSteps)
         {
+            _howFarIMoved += numberOfSteps;
             if (Length == Length.StreetCorner)
             {
                 Console.WriteLine($"The {Size} legs walked {numberOfSteps} steps suggestively");
                 return;
             }
 
-            _howFarIMoved += numberOfSteps;
 
             base.Walk(numberOfSteps);
         }
