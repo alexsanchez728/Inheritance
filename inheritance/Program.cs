@@ -57,43 +57,19 @@ namespace inheritance
                 Length = Length.StreetCorner
             };
 
-            var legs = new List<Legbase>
+            var movers = new List<IMoveable>
             {
                 shorts, skirt, skirt1, jeans, jeans1, jeans2, jeans3
             };
 
-            foreach (var leg in legs)
+            foreach (var mover in movers)
             {
-                leg.Walk(10);
-                leg.Jump(10);
-
-
-                // CASTING
-
-                //if (leg is Skirt)
-                //    // bool test first for conversion
-                //{
-                //  var s = (Skirt)leg;
-                //}
-
-                //var s = leg as Skirt;
-                //// the results of this conversions into a var
-                //// attempt to make leg into a Skirt
-                //if (s != null)
-                //    // Then it was a skirt
-                //{
-                //    s.Material
-                //}
-
-                //if (leg is Skirt s)
-                //// pattern matching - the new cool way to do it, as of 1/2018
-                //// make leg into Skirt if you can call it s
-                //{
-                //    s.Material = "jeans";
-                //};
+                mover.Walk(10);
+                mover.Jump(10);
+                mover.Run(20);
 
                 // pattern matching using switch statements
-                switch (leg)
+                switch (mover)
                 {
                     case Skirt s:
                         // create s from legBase, a skirt and do this...
@@ -103,8 +79,12 @@ namespace inheritance
                         // create j from legBase, a Jeans and do this...
                         Console.WriteLine($"its {j.Color} jeans");
                         break;
+                    case IMoveable m:
+                        m.Run(20);
+                        break;
                 }
-
+                //mover.HowFarIMoved = 7;
+                // ^ will not work because currently, one instance does not allow a set
             }
 
             Console.ReadKey();

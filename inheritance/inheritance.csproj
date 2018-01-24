@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pieces\Legs\IMove.cs" />
     <Compile Include="Pieces\Legs\Jeans.cs" />
     <Compile Include="Pieces\Legs\Legbase.cs" />
     <Compile Include="Pieces\Legs\LegSize.cs" />
