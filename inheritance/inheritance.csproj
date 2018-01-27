@@ -42,6 +42,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Minifigure.cs" />
+    <Compile Include="Pieces\Heads\Emmet.cs" />
+    <Compile Include="Pieces\Heads\Hair.cs" />
+    <Compile Include="Pieces\Heads\HeadGear.cs" />
+    <Compile Include="Pieces\Heads\Helmet.cs" />
     <Compile Include="Pieces\Legs\IMove.cs" />
     <Compile Include="Pieces\Legs\Jeans.cs" />
     <Compile Include="Pieces\Legs\Legbase.cs" />
@@ -49,11 +54,13 @@
     <Compile Include="Pieces\Legs\Length.cs" />
     <Compile Include="Pieces\Legs\Shorts.cs" />
     <Compile Include="Pieces\Legs\Skirt.cs" />
+    <Compile Include="Pieces\Torsos\DadBod.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
